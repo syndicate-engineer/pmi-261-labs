@@ -1,21 +1,16 @@
 #include <iostream>
-#include <cmath>
-
 using namespace std;
 
 int main() {
-    long long n;
-    cout << "Enter your nubmer: ";
+    int n;
+    cout << "Enter n quantity: ";
     cin >> n;
 
-    n = abs(n);
-
-    int sum = 0;
-    while (n > 0) {
-        sum += n % 10;
-        n /= 10;
+    int total = 0;
+    for (int i = 1; i <= n; i++) {
+        total += 2 * i;
     }
 
-    cout << "Sum of digits: " << sum << endl;
+    cout << "Sum of " << n << " even numbers = " << total << endl;
     return 0;
 }
